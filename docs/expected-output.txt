@@ -1,0 +1,41 @@
+TEST1 Abstract Event
+TEST1 Succeed!
+TEST2 Polymorphic events
+TEST2 Succeed!
+TEST3 Callback function
+TEST3 Succeed!
+TEST4 Callback function can be assigned to static methods
+TEST4 Succeed!
+TEST5 Event Listener
+TEST5 Succeed!
+TEST6 Event Listener
+TEST6 Succeed!
+TEST7 Get event listener from Dispatcher
+TEST7 Succeed!
+TEST8 Event dispatcher can send events to their subscribed listeners
+Event Timer 1! has passed exactly 1 seconds
+Event Timer 1! has passed exactly 2 seconds
+Event Timer 2! has passed exactly 1 seconds
+Event Timer 1! has passed exactly 3 seconds
+Event Timer 2! has passed exactly 2 seconds
+TEST8 Succeed!
+TEST9 Event handler interface
+TEST9 Succeed!
+TEST10 Generic event handler
+TEST10 Succeed!
+TEST11 Invoking 'call' method in event handler from object instance and specific event
+TEST11 Succeed!
+TEST12 Generic event handler must not call action with not supported event
+TEST12 Succeed!
+TEST13 Event manager for event handlers
+TEST13 Succeed!
+TEST14 Get event handler from event manager
+TEST14 Succeed!
+TEST15 Event manager can notify events to registered event handlers
+Event Timer 1! has passed exactly 1 seconds
+Event Timer 1! has passed exactly 2 seconds
+Event Timer 2! has passed exactly 1 seconds
+Event Timer 1! has passed exactly 3 seconds
+Event Timer 2! has passed exactly 2 seconds
+Timer 1! other event called
+TEST15 Succeed!
