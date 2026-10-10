@@ -29,6 +29,7 @@ using namespace testing;
 // ===========================================================================
 
 // Events Callbacks
+#include "event.hh" 
 #include "event_callbacks.hh" 
 
 /*********************************************************************
@@ -168,7 +169,7 @@ namespace Tests
         TEST( "Event Dispatcher for callbacks",
             "Listeners are stored in a EventDispatcher class, objects that implements the callback can subscribe to Events")
         {        
-            printf("TEST6 Event Listener\n");
+            printf("TEST6 Event dispatcher for callbacks\n");
 
             EventListener listener;
 
@@ -189,7 +190,7 @@ namespace Tests
         TEST( "Get event listener from event dispatcher",
             "Event dispatcher provides a method to obtain a listener subscribed in the array/container")
         {        
-            printf("TEST7 Get event listener from Dispatcher \n");
+            printf("TEST7 Get event listener from dispatcher \n");
 
             DummyObject dummyObject1(0);
             DummyObject dummyObject2(1);
@@ -241,9 +242,9 @@ namespace Tests
 
          // [ Test #8 ] -------------------------------------------------------
         TEST( "Dispatch a event",
-            "Event Dispatcher can send/dispatch events to their subscribed listeners")
+            "Event Dispatcher can send/dispatch events to its subscribed listeners")
         {        
-            printf("TEST8 Event dispatcher can send events to their subscribed listeners  \n");
+            printf("TEST8 Event dispatcher can send events to its subscribed listeners  \n");
             
             Timer timer1 {1,0};
             Timer timer2 {2,0};
