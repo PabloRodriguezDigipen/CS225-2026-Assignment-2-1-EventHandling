@@ -1,5 +1,6 @@
 #pragma once
 #include "event.hh"
+#include <vector>
 
 class IEventHandler {
     public:
@@ -23,4 +24,14 @@ public:
         if (specific_event != nullptr)
             (object->*method)(specific_event);
     }
+};
+
+class EventManager {
+private:
+    std::vector<IEventHandler*> handlers;
+
+public:
+    void registerEventHandler(IEventHandler* handler);
+    IEventHandler* getEventHandlerAt(int indx);
+    void notifyEvent(Event* e);
 };
