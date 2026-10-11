@@ -1,6 +1,8 @@
 #pragma once
 
+//event class
 class Event {
-    public:
+public:
+    //need a virtual destructor to be inherited
     virtual ~Event() = default;
 };

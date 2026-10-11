@@ -1,19 +1,24 @@
 #include "event_handlers.hh"
 
+//add the handler to the vector
 void EventManager::registerEventHandler(IEventHandler* handler) {
-    handlers.push_back(handler);
+    listeners.push_back(handler);
 }
 
+//returnt the handler at the given index
 IEventHandler* EventManager::getEventHandlerAt(int indx) {
-    return handlers[indx];
+    return listeners[indx];
 }
 
+//calls the evnt for the registered objects
 void EventManager::notifyEvent(Event* e) {
-    for (int i = 0; i < (int)handlers.size(); i++) {
-        IEventHandler* handler = getEventHandlerAt(i);
+    //loop around the handlers
+    for (int i = 0; i < (int)listeners.size(); i++) {
+        //get the handler on the current iteration
+        IEventHandler* listener = getEventHandlerAt(i);
 
-        if (handler != nullptr) {
-            handler->call(e);
-        }
+        //if it exists, call the event on it
+        if (listener != nullptr)
+            listener->call(e);
     }
 }
